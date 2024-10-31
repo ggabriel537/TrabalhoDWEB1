@@ -11,5 +11,7 @@
             "email": "dipirona28@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    }
 }
