@@ -1,0 +1,15 @@
+{
+    "name": "laboratorio/trabalho-p2",
+    "autoload": {
+        "psr-4": {
+            "Laboratorio\\TrabalhoP2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gabriel",
+            "email": "dipirona28@gmail.com"
+        }
+    ],
+    "require": {}
+}
