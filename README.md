@@ -15,5 +15,5 @@ Qualquer um que esteja procurando um sistema simples para se lembrar de tarefas 
 
 # Diagrama do banco de dados
 
-![alt text]([http://url/to/img.png](https://github.com/ggabriel537/TrabalhoDWEB1/blob/main/DiagramaBanco.png?raw=true)
+![alt text](https://github.com/ggabriel537/TrabalhoDWEB1/blob/main/DiagramaBanco.png?raw=true)
 
