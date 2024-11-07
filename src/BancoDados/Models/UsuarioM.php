@@ -2,7 +2,7 @@
 include_once 'src/BancoDados/Config/db.php';
 include_once 'src/Entidades/Usuario.php';
 
-class UsuarioM {
+class UsuarioM { //Operacoes no banco da API
     private $conn;
 
     public function __construct($db)

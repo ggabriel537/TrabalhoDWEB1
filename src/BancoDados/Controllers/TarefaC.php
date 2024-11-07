@@ -11,13 +11,13 @@ class TarefaC
         $this->tarefam = new TarefaM($db);
     }
 
-    public function listarTarefas()
+    public function listarTarefas() //Lista todas as tarefas
     {
         $tarefas = $this->tarefam->retornarTarefas();
         echo json_encode($tarefas);
     }
 
-    public function criar()
+    public function criar() //Cria tarefa
     {
         $data = json_decode(file_get_contents("php://input"));
         if (isset($data->nome) && isset($data->user_id) && isset($data->descricao) && isset($data->prazo) && isset($data->notificar)) {
@@ -37,7 +37,7 @@ class TarefaC
         }
     }
 
-    public function listarTarefa($id)
+    public function listarTarefa($id) //Lista uma unica tarefa
     {
         if (isset($id)) {
             try {
@@ -58,7 +58,7 @@ class TarefaC
         }
     }
 
-    public function atualizar($id)
+    public function atualizar($id) //Atualiza uma tarefa
     {
         $data = json_decode(file_get_contents("php://input"));
         if (isset($id) && isset($data->nome) && isset($data->user_id) && isset($data->descricao) && isset($data->prazo) && isset($data->notificar)) {
@@ -82,7 +82,7 @@ class TarefaC
         }
     }
 
-    public function deletar($id)
+    public function deletar($id) //Deleta uma tarefa
     {
         if (isset($id)) {
             try {

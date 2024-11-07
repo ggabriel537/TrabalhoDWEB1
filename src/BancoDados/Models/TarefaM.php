@@ -1,7 +1,7 @@
 <?php
 include_once 'src/BancoDados/Config/db.php';
 include_once 'src/Entidades/Tarefa.php';
-    class TarefaM{
+    class TarefaM{ //Operações no banco da API
         private $conn;
 
         public function __construct($db)

@@ -11,13 +11,13 @@ class UsuarioC
         $this->usuariom = new UsuarioM($db);
     }
 
-    public function listarUsuarios()
+    public function listarUsuarios() //Lista todos os usuarios
     {
         $usuarios = $this->usuariom->retornarUsuarios();
         echo json_encode($usuarios);
     }
 
-    public function criar()
+    public function criar() //Cria um usuario
     {
         $data = json_decode(file_get_contents("php://input"));
         if (isset($data->user) && isset($data->senha)) {
@@ -37,7 +37,7 @@ class UsuarioC
         }
     }
 
-    public function listarUsuario($user)
+    public function listarUsuario($user) //Lista um unico usuario
     {
         if (isset($user)) {
             try {
@@ -58,7 +58,7 @@ class UsuarioC
         }
     }
 
-    public function atualizar($user)
+    public function atualizar($user) //Atualiza um usuario
     {
         $data = json_decode(file_get_contents("php://input"));
         if (isset($user) && isset($data->user) && isset($data->senha)) {
@@ -82,7 +82,7 @@ class UsuarioC
         }
     }
 
-    public function deletar($user)
+    public function deletar($user) //Deleta um usuario
     {
         if (isset($user)) {
             try {

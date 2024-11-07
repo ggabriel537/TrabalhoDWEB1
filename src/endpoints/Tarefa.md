@@ -60,9 +60,9 @@ Esta API permite o gerenciamento de tarefas relacionadas à manutenção de carr
    - **Descrição:** Cria uma nova tarefa de manutenção de carro.
    - **Parâmetros do corpo da requisição (JSON):**
      - `nome` (string) - Nome da tarefa.
-     - `user_id` (string) - ID do usuário responsável pela tarefa (agora uma string, por exemplo: "dipirona").
+     - `user_id` (string) - ID do usuário responsável pela tarefa.
      - `descricao` (string) - Descrição da tarefa.
-     - `prazo` (string, formato ISO 8601) - Prazo de conclusão da tarefa.
+     - `prazo` (string) - Prazo de conclusão da tarefa.
      - `notificar` (boolean) - Indica se o usuário será notificado sobre o prazo da tarefa.
    - **Exemplo de requisição:**
      ```json
@@ -95,7 +95,7 @@ Esta API permite o gerenciamento de tarefas relacionadas à manutenção de carr
      - `nome` (string) - Nome da tarefa.
      - `user_id` (string) - ID do usuário responsável pela tarefa (agora uma string).
      - `descricao` (string) - Descrição da tarefa.
-     - `prazo` (string, formato ISO 8601) - Prazo de conclusão da tarefa.
+     - `prazo` (string) - Prazo de conclusão da tarefa.
      - `notificar` (boolean) - Indica se o usuário será notificado sobre o prazo da tarefa.
    - **Exemplo de requisição:**
      ```json

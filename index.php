@@ -4,11 +4,13 @@ require_once 'src/BancoDados/Controllers/TarefaC.php';
 require_once 'src/BancoDados/Controllers/UsuarioC.php';
 require_once 'src/BancoDados/Config/db.php';
 
-$router = new Router();
+$router = new Router(); 
 
+//Inicia as classes de controllers
 $tarefac = new TarefaC($db);
 $usuarioc = new UsuarioC($db);
 
+//Rotas do router
 $router->add('GET', '/tarefas', [$tarefac, 'listarTarefas']);
 $router->add('GET', '/tarefas/{id}', [$tarefac, 'listarTarefa']);
 $router->add('POST', '/tarefas', [$tarefac, 'criar']);

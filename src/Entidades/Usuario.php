@@ -1,5 +1,5 @@
 <?php
-    class Usuario{
+    class Usuario{ //Entidade usuario, guarda senha e login do usuario
 
         private $user;
         private $senha;

@@ -1,4 +1,4 @@
-<?php
+<?php //Configs banco de dados
 $host = 'localhost';
 $db = 'BancoApp';
 $user = 'root';

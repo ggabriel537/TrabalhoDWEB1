@@ -1,5 +1,5 @@
 <?php
-    class Tarefa {
+    class Tarefa { //Entidade Tarefa, contém os dados da tarefa
 
         private $id;
         private $nome;
