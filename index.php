@@ -1,13 +1,13 @@
 <?php
-/*require_once 'src/Router.php';
+require_once 'src/Router.php';
 require_once 'src/BancoDados/Controllers/TarefaC.php';
 require_once 'src/BancoDados/Controllers/UsuarioC.php';
 require_once 'src/BancoDados/Config/db.php';
 
 $router = new Router();
 
-$tarefac = new TarefaC();
-$usuarioc = new UsuarioC();
+$tarefac = new TarefaC($db);
+$usuarioc = new UsuarioC($db);
 
 $router->add('GET', '/tarefas', [$tarefac, 'listarTarefas']);
 $router->add('GET', '/tarefas/{id}', [$tarefac, 'listarTarefa']);
@@ -26,7 +26,7 @@ $requestedPath = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 $pathItems = explode("/", $requestedPath);
 $requestedPath = "/" . $pathItems[3] . ($pathItems[4] ? "/" . $pathItems[4] : "");
 
-$router->dispatch($requestedPath);*/
+$router->dispatch($requestedPath);
 ?>
 
 <!DOCTYPE html>
