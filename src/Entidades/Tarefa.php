@@ -1,5 +1,5 @@
 <?php
-    class Tarefa{
+    class Tarefa {
 
         private $id;
         private $nome;
@@ -8,10 +8,14 @@
         private $prazo;
         private $notificar;
 
-        function __construct($user, $senha)
+        function __construct($id, $nome, $user_id, $descricao, $prazo, $notificar)
         {
-            $this->user = $user;
-            $this->senha = $senha;
+            $this->id = $id;
+            $this->nome = $nome;
+            $this->user_id = $user_id;
+            $this->descricao = $descricao;
+            $this->prazo = $prazo;
+            $this->notificar = $notificar;
         }
 
         public function getId() {
