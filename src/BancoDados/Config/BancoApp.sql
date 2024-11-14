@@ -1,17 +1,18 @@
-CREATE DATABASE BancoApp;
+CREATE DATABASE BancoDados;
 
-USE BancoApp;
+USE BancoDados;
 
 CREATE TABLE Usuario (
-    user TEXT PRIMARY KEY UNIQUE,
-    senha TEXT NOT NULL
+    user varchar(32) PRIMARY KEY UNIQUE,
+    senha varchar(32) NOT NULL
 );
 
 CREATE TABLE Tarefa (
-    id SERIAL PRIMARY KEY,
-    user_id TEXT FOREIGN KEY NOT NULL,
-    nome TEXT NOT NULL,
-    descricao TEXT,
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id VARCHAR(32),
+    nome VARCHAR(32) NOT NULL,
+    descricao VARCHAR(250),
     prazo DATE NOT NULL,
-    notificar BOOLEAN NOT NULL
-)
+    notificar BOOLEAN NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES Usuario(user)
+);

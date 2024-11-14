@@ -1,8 +1,8 @@
 <?php //Configs banco de dados
 $host = 'localhost';
-$db = 'BancoApp';
+$db = 'BancoDados';
 $user = 'root';
-$pass = 'senha123';
+$pass = 'r5x9EA93yuS4EeP';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
