@@ -48,6 +48,7 @@ class UsuarioC
                 }
             } catch (\Throwable $th) {
                 http_response_code(500);
+                echo(var_dump($th));
                 echo json_encode(["message" => "Erro ao buscar o usuário."]);
             }
         } else {
