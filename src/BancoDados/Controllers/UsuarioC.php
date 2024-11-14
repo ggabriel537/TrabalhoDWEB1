@@ -22,9 +22,7 @@ class UsuarioC
         $data = json_decode(file_get_contents("php://input"));
         if (isset($data->user) && isset($data->senha)) {
             try {
-                $usuario = new Usuario($data->user, $data->senha);
-                $this->usuariom->salvar($usuario);
-
+                $this->usuariom->salvar($data->user, $data->senha);
                 http_response_code(201);
                 echo json_encode(["message" => "Usuário criado com sucesso."]);
             } catch (\Throwable $th) {

@@ -10,12 +10,12 @@ class UsuarioM { //Operacoes no banco da API
         $this->conn = $db;
     }
 
-    public function salvar($usuario)
+    public function salvar($user, $senha)
     {
         $sql = "INSERT INTO usuarios (user, senha) VALUES (:user, :senha)";
         $stmt = $this->conn->prepare($sql);
-        $stmt->bindParam(':user', $usuario->getUser());
-        $stmt->bindParam(':senha', $usuario->getSenha());
+        $stmt->bindParam(':user', $user);
+        $stmt->bindParam(':senha', $senha);
         return $stmt->execute();
     }
 

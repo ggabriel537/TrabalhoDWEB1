@@ -26,9 +26,8 @@ $router->add('PUT', '/usuarios/{user}', [$usuarioc, 'atualizar']);
 
 $requestedPath = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 $pathItems = explode("/", $requestedPath);
-$requestedPath = "/" . $pathItems[3] . ($pathItems[4] ? "/" . $pathItems[4] : "");
-
-$router->dispatch($requestedPath);
+$requestedPath = implode("/", $pathItems);;
+$router->dispatch(requestedPath: $requestedPath);
 ?>
 
 <!DOCTYPE html>
