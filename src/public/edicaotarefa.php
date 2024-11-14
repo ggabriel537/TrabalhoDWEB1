@@ -12,9 +12,6 @@
     <nav>
         <div class="nav-wrapper blue">
             <a href="/index.php" class="brand-logo center">Agendador de Tarefas</a>
-            <ul id="nav-mobile" class="right">
-                <li><a href="/src/public/login.php" class="modal-trigger">Login</a></li>
-            </ul>
         </div>
     </nav>
 

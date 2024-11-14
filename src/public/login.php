@@ -67,8 +67,8 @@
 
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault();
-        const usuario = document.getElementById('user').value;
-        const senha = document.getElementById('senha').value;
+        const usuario = document.getElementById('user').val;
+        const senha = document.getElementById('senha').val;
         requisicao(usuario, senha);
     });
 </script>
